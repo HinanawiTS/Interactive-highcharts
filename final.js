@@ -89,7 +89,7 @@ function plotTotalColumn2() {
 			scrollPositionX: 1
 			}
 		},
-		title: {text: 'Total Population In California'},
+		title: {text: 'Total Population in California'},
 		subtitle: {text: 'From 1969 - 2019'},
 		xAxis: {
 			title: { text: "Year" },
