@@ -167,7 +167,7 @@ function plotThirdPie() {
 				{   name: 'DEM',
 					y: 11109764,
 					color: "blue"
-				}
+				}, {name: "OTHER", y: 268910, color: "rgb(170, 204, 179)"}
 			]
 		}]
 	});
