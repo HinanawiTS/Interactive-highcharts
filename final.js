@@ -144,7 +144,7 @@ function plotThirdPie() {
         	plotShadow: false,
         	type: 'pie',	
 		},
-        title: {text: 'California Political Tendency Rate'},
+        title: {text: 'Presidential Election Votes in California'},
         subtitle: {text: 'In 2020 Election'},
 		plotOptions: {
 			pie: {
