@@ -35,7 +35,7 @@ function plotTotalColumn() {
 			scrollPositionX: 1
 			}
 		},
-		title: {text: 'Average Income In California'},
+		title: {text: 'Average Income in California'},
 		subtitle: {text: 'From 1969 - 2019'},
 		xAxis: {
 			title: { text: "Year" },
