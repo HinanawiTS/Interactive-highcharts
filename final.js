@@ -325,7 +325,7 @@ function plotThirdPie() {
 			verticalAlign: 'top',
 			floating: true,
 			backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
-			borderWidth: 1
+			borderWidth: 1, x: -100
 		},
 		plotOptions: {
 			scatter: {
