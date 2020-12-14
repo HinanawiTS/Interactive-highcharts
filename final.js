@@ -26,7 +26,7 @@ let winning_total2 = [19711000, 20023181, 20345575, 20584794, 20867737, 21172548
 
 
 function plotTotalColumn() {
-	Highcharts.chart("LineChart_total1", {
+	Highcharts.chart("income", {
 		chart: {
 			type: 'line',
 			zoomType: 'x,y',
@@ -80,7 +80,7 @@ function plotTotalColumn() {
 }
 
 function plotTotalColumn2() {
-	Highcharts.chart("LineChart_total2", {
+	Highcharts.chart("pop", {
 		chart: {
 			type: 'line',
 			zoomType: 'x,y',
@@ -137,7 +137,7 @@ function plotTotalColumn2() {
 
 
 function plotThirdPie() {
-	Highcharts.chart('PieChart_3', {
+	Highcharts.chart('pie', {
 		chart: {
 			plotBackgroundColor: null,
         	plotBorderWidth: null,
