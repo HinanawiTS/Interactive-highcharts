@@ -220,14 +220,14 @@ function plotThirdPie() {
 			}
 		},
 		legend: {
-			layout: 'vertical',
-			align: 'left',
-			verticalAlign: 'top',
-			x: 100,
-			y: 70,
-			floating: true,
-			backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
-			borderWidth: 1
+			enabled: true, 
+			floating: false, 
+			
+			
+			
+			
+			
+			
 		},
 		plotOptions: {
 			scatter: {
@@ -320,12 +320,8 @@ function plotThirdPie() {
 			} 
 		},
 		legend: {
-			layout: 'vertical',
-			align: 'right',
-			verticalAlign: 'top',
-			floating: true,
-			backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
-			borderWidth: 1, x: -100
+			enabled: true, 
+			floating: false, 
 		},
 		plotOptions: {
 			scatter: {
