@@ -283,8 +283,8 @@ function plotThirdPie() {
 
 
 
-
-function init() {
+ 
+function init() { 
 	plotTotalColumn();
 	plotTotalColumn2();
     plotThirdPie();
