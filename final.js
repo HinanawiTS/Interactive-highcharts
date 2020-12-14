@@ -171,7 +171,116 @@ function plotThirdPie() {
 			]
 		}]
 	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	var scatter_income
+	scatter_income = Highcharts.chart("income_scatter", {
+		chart: {
+			plotBackgroundColor: null, 
+
+
+
+
+
+
+			type: 'scatter', 
+			zoomType: 'xy'
+		},
+		title: {
+			text: 'Average Income vs. Percentage of Democratic Votes'
+		},
+		subtitle: {
+			text: "In Presidential Election 2020 in California"
+		},
+		xAxis: {
+			title: {
+				enabled: true,
+				text: "Average Income"
+			},
+			startOnTick: true,
+			endOnTick: true,
+			showLastLabel: true
+		},
+		yAxis: {
+			title: {
+				text: "Percentage of Votes to Democrats (%)"
+			}
+		},
+		legend: {
+			layout: 'vertical',
+			align: 'left',
+			verticalAlign: 'top',
+			x: 100,
+			y: 70,
+			floating: true,
+			backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+			borderWidth: 1
+		},
+		plotOptions: {
+			scatter: {
+				marker: {
+					radius: 5,
+					states: {
+						hover: {
+							enabled: true,
+							lineColor: 'rgb(100,100,100)'
+						}
+					}
+				},
+				states: {
+					hover: {
+						marker: {
+							enabled: false
+						}
+					}
+				},
+				tooltip: {
+					headerFormat: '<b>{series.name}</b><br>',
+					pointFormat: 'Average Income {point.x} dollars, {point.y}% Democratic Votes'
+				}
+			}
+		},
+		series: [{
+
+
+
+
+			name: "Democratic Counties",
+			color: 'rgba(119, 152, 191, .5)',
+			data: [[45487, 53.99], [49654, 67.28], [40447, 62.45], [60513, 50.08], [44259, 53.24], [65094, 72.56], [81171, 81.92], [141735, 83.9], [52976, 68.45],
+			[41077, 55.43], [53500, 61.49], [59838, 71.11], [75717, 70.67], [63542, 57.59], [72155, 66.11], [71711, 54.61], [42418, 54.06], [55266, 62.95],
+			[55261, 62.47], [42043, 55.45], [63729, 61.65], [139405, 87.02], [47139, 57.09], [61004, 56.7], [134107, 79.41], [66076, 66.41], [115997, 74.22],
+
+			[71592, 80.92], [53505, 65.51], [66700, 76.38], [47860, 50.86], [45742, 50.4], [64715, 60.78], [56123, 71.24], [85324, 73.14]]
+	
+		}, {
+			name: "Republican Counties",
+			color: 'rgba(223, 83, 83, .5)',
+
+
+
+
+
+			data: [[49194, 36.13], [41843, 44.78], [39433, 43.72], [38130, 23.78], [41267, 44.09], [56354, 40.73], [51088, 27.0], [68936, 46.6], [55910, 41.44],
+			[45920, 37.51], [48438, 33.04], [47245, 39.0], [48021, 41.92], [47605, 41.61], [43268, 31.77], [43471, 47.21], [42845, 46.01], [48841, 40.37],
+			[43536, 38.85], [51131, 37.82], [51342, 41.53], [38445, 41.99], [69895, 45.5]]		
+			}]
+		}
 }
+
 
 
 
@@ -180,6 +289,13 @@ function init() {
 	plotTotalColumn2();
     plotThirdPie();
 
+	
+	
+	
+	
+	
+	
+	
 }
 
 document.addEventListener('DOMContentLoaded', init, false);
