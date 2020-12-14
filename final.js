@@ -216,7 +216,7 @@ function plotThirdPie() {
 		},
 		yAxis: {
 			title: {
-				text: "Percentage of Votes to Democrats (%)"
+				text: "Percentage of Democratic Votes (%)"
 			}
 		},
 		legend: {
