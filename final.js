@@ -375,7 +375,7 @@ function plotThirdPie() {
 			}]
 		}
 	)
-}
+
 
 
 var scatter_pop_big
@@ -457,8 +457,7 @@ scatter_pop_big = Highcharts.chart("pop_scatter_big", {
 		}]
 	
 		}
-	)
- 
+	)}
 function init() { 
 	plotTotalColumn();
 	plotTotalColumn2();
