@@ -128,7 +128,7 @@ function plotTotalColumn2() {
 		series: [{
 			name: 'Population',
 			data: winning_total2,
-			showInLegend: false
+			showInLegend: false, color: "orange", 
 		}]
 	});
 }
