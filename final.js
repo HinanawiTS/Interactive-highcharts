@@ -287,7 +287,7 @@ function plotThirdPie() {
 	
 	
 	var scatter_pop
-	scatter_income = Highcharts.chart("pop_scatter", {
+	scatter_pop = Highcharts.chart("pop_scatter", {
 		chart: {
 			plotBackgroundColor: null, 
 
@@ -303,7 +303,7 @@ function plotThirdPie() {
 			text: 'Population vs. Percentage of Democratic Votes'
 		},
 		subtitle: {
-			text: "in Presidential Election 2020 in California"
+			text: "in Counties with Population <= 200K"
 		},
 		xAxis: {
 			title: {
@@ -312,7 +312,7 @@ function plotThirdPie() {
 			},
 			startOnTick: true,
 			endOnTick: true,
-			showLastLabel: true, min: 0, max: 10010000
+			showLastLabel: true, min: 0, max: 200000
 		},
 		yAxis: {
 			title: {
@@ -356,10 +356,10 @@ function plotThirdPie() {
 
 
 
-			data: [[999101, 53.99], [135558, 67.28], [181215, 62.45], [18039, 50.08], [64386, 53.24], [10039107, 72.56], [1671329, 81.92], [258826, 83.9], [86749, 68.45],
-			[277680, 55.43], [10000, 61.49], [434061, 71.11], [137744, 70.67], [99755, 57.59], [1129, 66.11], [3175692, 54.61], [2470546, 54.06], [1552058, 62.95],
-			[62808, 62.47], [2180085, 55.45], [3338330, 61.65], [881549, 87.02], [762148, 57.09], [283111, 56.7], [766573, 79.41], [446499, 66.41], [1927852, 74.22],
-			[273213, 80.92], [447643, 65.51], [494336, 76.38], [219186, 50.86], [550660, 50.4], [846006, 60.78], [220500, 71.24], [1153526, 73.14]]
+			data: [[135558, 67.28], [181215, 62.45], [18039, 50.08], [64386, 53.24], [86749, 68.45],
+			[10000, 61.49], [137744, 70.67], [99755, 57.59], [1129, 66.11],
+			[62808, 62.47],
+			]
 	
 		}, {
 			name: "Republican Counties",
@@ -378,7 +378,96 @@ function plotThirdPie() {
 }
 
 
+var scatter_pop
+scatter_pop = Highcharts.chart("pop_scatter", {
+		chart: {
+			plotBackgroundColor: null, 
 
+
+
+
+
+
+			type: 'scatter', 
+			zoomType: 'xy'
+		},
+		title: {
+			text: 'Population vs. Percentage of Democratic Votes'
+		},
+		subtitle: {
+			text: "in counties with population <= 200k"
+		},
+		xAxis: {
+			title: {
+				enabled: true,
+				text: "Population in County"
+			},
+			startOnTick: true,
+			endOnTick: true,
+			showLastLabel: true, min: 0, max: 200000
+		},
+		yAxis: {
+			title: {
+				text: "Percentage of Democratic Votes (%)"
+			} 
+		},
+		legend: {
+			enabled: true, floating: false, 
+			
+			
+		},
+		plotOptions: {
+			scatter: {
+				marker: {
+					radius: 5,
+					states: {
+						hover: {
+							enabled: true,
+							lineColor: 'rgb(100,100,100)'
+						}
+					}
+				},
+				states: {
+					hover: {
+						marker: {
+							enabled: false
+						}
+					}
+				},
+				tooltip: {
+					headerFormat: '<b>{series.name}</b><br>',
+					pointFormat: 'Total Population: {point.x}, {point.y}% Democratic Votes'
+				}
+			}
+		},
+		series: [{
+			name: "Democratic Counties",
+
+			color: 'rgba(119, 152, 191, .9)',
+
+
+
+
+
+			data: [[18039, 50.08], [64386, 53.24], [86749, 68.45],
+			[10000, 61.49], [99755, 57.59], [1129, 66.11],
+			[62808, 62.47], [135558, 67.28], [181215, 62.45], [137744, 70.67],
+			]
+	
+		}, {
+			name: "Republican Counties",
+			color: 'rgba(223, 83, 83, .9)',
+
+
+
+
+
+			data: [[49194, 36.13], [41843, 44.78], [39433, 43.72], [38130, 23.78], [41267, 44.09], [56354, 40.73], [51088, 27.0], [68936, 46.6], [55910, 41.44],
+			[45920, 37.51], [48438, 33.04], [47245, 39.0], [48021, 41.92], [47605, 41.61], [43268, 31.77], [43471, 47.21], [42845, 46.01], [48841, 40.37],
+			[43536, 38.85], [51131, 37.82], [51342, 41.53], [38445, 41.99], [69895, 45.5]]		
+			}]
+		}
+	)
  
 function init() { 
 	plotTotalColumn();
