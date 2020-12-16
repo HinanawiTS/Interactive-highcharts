@@ -395,7 +395,7 @@ scatter_pop_big = Highcharts.chart("pop_scatter_big", {
 			text: 'Population vs. Percentage of Democratic Votes'
 		},
 		subtitle: {
-			text: "in counties with population > 200k"
+			text: "in Counties with Population > 200k"
 		},
 		xAxis: {
 			title: {
